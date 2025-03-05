@@ -5,7 +5,7 @@ import MovieDisplay from "./components/MovieDisplay";
 
 function App() {
   const [movieData, setMovieData] = useState([]);
-
+  console.log(movieData);
   return (
     <div className="app">
       <Form setMovieData={setMovieData} />

@@ -2,7 +2,6 @@ import { Box, TextField, Button } from "@mui/material";
 import React, { useState } from "react";
 import axiosOMDbAPI from "../api/axiosOMDbAPI";
 
-// console.log(axiosOMDbAPI);
 function Form({ setMovieData }) {
   const [movieName, setMovieName] = useState("");
 
@@ -11,7 +10,9 @@ function Form({ setMovieData }) {
     if (!movieName.trim()) return; // Prevent empty searches
 
     axiosOMDbAPI
-      .get(`&t=${movieName}`)
+      .get(``, {
+        params: { t: movieName },
+      })
       .then((res) => {
         console.log(res.data);
         setMovieData(res.data);
