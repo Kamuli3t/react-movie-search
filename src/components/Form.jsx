@@ -24,7 +24,7 @@ function Form({ setMovieData }) {
     <Box
       component="form"
       onSubmit={handleSearch}
-      sx={{ width: "30vw", display: "flex", margin: "2rem auto" }}
+      sx={{ display: "flex", width: "80%", margin: "0 auto" }}
     >
       <TextField
         label="Movie's Name"
