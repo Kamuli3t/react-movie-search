@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "98e3fb1f";
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = `http://www.omdbapi.com/`;
 
 console.log(BASE_URL);
